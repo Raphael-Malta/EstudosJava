@@ -75,7 +75,7 @@ public class Worker {
 		for(HourContract c : contracts) {
 			cal.setTime(c.getDate());
 			int c_year = cal.get(Calendar.YEAR);
-			//calendar sempre começa mês com 0
+			//calendar sempre começa mês com 0 por isso a soma +1
 			int c_month = cal.get(Calendar.MONTH) + 1;
 			if(year == c_year && month == c_month) {
 				sum += c.totalValue();
